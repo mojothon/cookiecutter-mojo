@@ -159,9 +159,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# magic environments
-.magic
-
 # Rattler
 output
 
@@ -171,4 +168,6 @@ output
 # Mojo
 *.mojopkg
 
-
+# pixi environments
+.pixi/*
+!.pixi/config.toml

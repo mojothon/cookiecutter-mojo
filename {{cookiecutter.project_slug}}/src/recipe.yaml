@@ -15,25 +15,24 @@ source:
 build:
   script:
     - mkdir -p ${PREFIX}/lib/mojo
-    - magic run mojo package {{cookiecutter.project_slug}}
+    - pixi run mojo package {{cookiecutter.project_slug}}
     - cp {{cookiecutter.project_slug}}.mojopkg ${PREFIX}/lib/mojo/{{cookiecutter.project_slug}}.mojopkg
 
 requirements:
   run:
-    - max >= 24.5.0,<25
+    - mojo >= 0.25.6
 
 tests:
   - script:
       # commands to run to test the package. If any of the commands
       # returns with an error code, the test is considered failed.
-      # if I don't copy everything into a test dir, mojo test runs the tests in the .magic dir and fails :|
-      - magic run test
+      - pixi run test
 
     files:
       # Extra files to be copied to the test directory from the "work directory"
       source:
         - {{cookiecutter.project_slug}}.mojopkg
-        - mojoproject.toml
+        - pixi.toml
         - tests
 
 about:

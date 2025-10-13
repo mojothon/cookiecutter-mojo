@@ -6,7 +6,7 @@
 ## package build
 
 ```bash
-magic run mojo package  src/{{cookiecutter.project_slug}}/ -o {{cookiecutter.project_slug}}.mojopkg
+pixi run mojo package  src/{{cookiecutter.project_slug}}/ -o {{cookiecutter.project_slug}}.mojopkg
 ```
 or 
 
@@ -17,7 +17,7 @@ make package
 ## test
 
 ```bash
-magic run test 
+pixi run test 
 ```
 
 or 

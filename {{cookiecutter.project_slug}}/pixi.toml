@@ -1,17 +1,16 @@
 [project]
 authors = ["{{cookiecutter.full_name}}<{{cookiecutter.email}}>"]
-channels = ["https://repo.prefix.dev/mojo-force", "conda-forge", "https://conda.modular.com/max"]
+channels = ["https://conda.modular.com/max-nightly", "conda-forge", "https://repo.prefix.dev/modular-community"]
 description = "{{cookiecutter.project_short_description}}"
 name = "{{cookiecutter.project_slug}}"
 platforms = ["osx-arm64", "linux-64"]
 version = "{{cookiecutter.version}}"
 
-
 [tasks]
-test = "mojo run tests/test_main.mojo"
-build = "rattler-build build -r src -c https://conda.modular.com/max -c conda-forge --skip-existing=all"
+test = "pixi run mojo run tests/test_main.mojo"
+build = "rattler-build build -r src -c https://prefix.dev/mojo-force -c conda-forge --skip-existing=all"
 publish = { cmd = "bash scripts/publish.sh", env = { PREFIX_API_KEY = "$PREFIX_API_KEY" } }
 
 [dependencies]
-max = ">=24.5.0,<25"
-python = ">=3.8,==3.12"
+mojo = ">=0.25.7,<0.26"
+python = ">=3.10,==3.12"
