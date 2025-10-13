@@ -14,3 +14,9 @@ build:
 
 doc:
 	mkdocs serve
+
+shell:
+	pixi shell
+
+clean:
+	rm -rf output/
