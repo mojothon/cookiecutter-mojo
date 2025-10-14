@@ -26,6 +26,18 @@ or
 make test
 ```
 
+## add new package
+
+```bash
+pixi add {{cookiecutter.project_name}} --platform linux-64
+```
+
+## publish package
+
+```bash
+make upload
+```
+
 ## version
 
 version {{cookiecutter.version}}
