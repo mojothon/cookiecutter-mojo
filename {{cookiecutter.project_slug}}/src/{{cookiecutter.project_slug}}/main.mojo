@@ -1,4 +1,4 @@
 from .version import __version__
 
-def main():
+def index():
     print(__version__)
