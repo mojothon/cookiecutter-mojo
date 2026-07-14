@@ -1,4 +1,4 @@
-[project]
+[workspace]
 authors = ["{{cookiecutter.full_name}}<{{cookiecutter.email}}>"]
 channels = [
     "https://conda.modular.com/max/", 

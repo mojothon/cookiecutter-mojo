@@ -166,7 +166,7 @@ output
 .vscode/
 
 # Mojo
-*.mojopkg
+*.mojoc
 
 # pixi environments
 .pixi/*

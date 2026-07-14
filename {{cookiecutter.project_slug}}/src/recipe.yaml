@@ -15,12 +15,11 @@ source:
 build:
   script:
     - mkdir -p ${PREFIX}/lib/mojo
-    - pixi run mojo package {{cookiecutter.project_slug}}
-    - cp {{cookiecutter.project_slug}}.mojopkg ${PREFIX}/lib/mojo/{{cookiecutter.project_slug}}.mojopkg
-
+    - pixi run mojo precompile {{cookiecutter.project_slug}}
+    - cp {{cookiecutter.project_slug}}.mojoc ${PREFIX}/lib/mojo/{{cookiecutter.project_slug}}.mojoc
 requirements:
   run:
-    - mojo >= 0.25.6
+    - mojo >= 1.0.0b2
 
 tests:
   - script:
@@ -31,7 +30,7 @@ tests:
     files:
       # Extra files to be copied to the test directory from the "work directory"
       source:
-        - {{cookiecutter.project_slug}}.mojopkg
+        - {{cookiecutter.project_slug}}.mojoc
         - pixi.toml
         - tests
 

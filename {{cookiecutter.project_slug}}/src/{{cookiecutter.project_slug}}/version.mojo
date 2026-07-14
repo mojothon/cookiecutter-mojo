@@ -1,1 +1,1 @@
-alias __version__ = "{{cookiecutter.version}}"
+comptime __version__ = "{{cookiecutter.version}}"

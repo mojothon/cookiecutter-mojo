@@ -6,7 +6,7 @@
 ## package build
 
 ```bash
-pixi run mojo package  src/{{cookiecutter.project_slug}}/ -o {{cookiecutter.project_slug}}.mojopkg
+pixi run mojo precompile src/{{cookiecutter.project_slug}}/ -o {{cookiecutter.project_slug}}.mojoc
 ```
 or 
 

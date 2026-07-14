@@ -1,10 +1,20 @@
 .PHONY: build
 
+help:
+	@echo "Available commands:"
+	@echo "  make test      - Run tests"
+	@echo "  make package   - Precompile Mojo files"
+	@echo "  make upload    - Upload package to Prefix"
+	@echo "  make build     - Build the project"
+	@echo "  make doc       - Serve documentation"
+	@echo "  make shell     - Open a shell"
+	@echo "  make clean     - Clean output"
+
 test:
 	pixi run test 
 
 package:
-	pixi run mojo package  src/{{cookiecutter.project_slug}}/ -o {{cookiecutter.project_slug}}.mojopkg
+	pixi run mojo precompile src/{{cookiecutter.project_slug}}/ -o {{cookiecutter.project_slug}}.mojoc
 
 upload:
 	export PREFIX_API_KEY={$PREFIX_API_KEY} & bash scripts/publish.sh
