@@ -5,6 +5,7 @@ help:
 	@echo "  make test      - Run tests"
 	@echo "  make package   - Precompile Mojo files"
 	@echo "  make upload    - Upload package to Prefix"
+	@echo "  make publish   - Publish package to Prefix"
 	@echo "  make build     - Build the project"
 	@echo "  make doc       - Serve documentation"
 	@echo "  make shell     - Open a shell"
@@ -17,6 +18,9 @@ package:
 	pixi run mojo precompile src/{{cookiecutter.project_slug}}/ -o {{cookiecutter.project_slug}}.mojoc
 
 upload:
+	export PREFIX_API_KEY=${PREFIX_API_KEY} & bash scripts/publish.sh
+
+publish:
 	export PREFIX_API_KEY=${PREFIX_API_KEY} & bash scripts/publish.sh
 
 build:
