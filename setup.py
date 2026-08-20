@@ -17,7 +17,7 @@ setup(
     long_description=long_description,
     author="llango",
     author_email="rontomai@gmail.com",
-    url="https://github.com/llango/cookiecutter-mojo",
+    url="https://github.com/mojothon/cookiecutter-mojo",
     download_url="",
     packages=[],
     include_package_data=True,
