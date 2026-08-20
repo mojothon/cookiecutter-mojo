@@ -19,7 +19,7 @@ build:
     - cp {{cookiecutter.project_slug}}.mojoc ${PREFIX}/lib/mojo/{{cookiecutter.project_slug}}.mojoc
 requirements:
   run:
-    - mojo >= 1.0.0b2
+    - mojo >= 1.0.0
 
 tests:
   - script:
