@@ -127,7 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-.codebudy/
-.vscode/
-.idea/
-.cursor/    
+.codebudy
+.codebudy/*
+.vscode/*
+.idea/*
+.cursor/*    

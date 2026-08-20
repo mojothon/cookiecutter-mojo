@@ -16,7 +16,7 @@ pip install cookiecutter
 ### generate a mojo project
 
 ```bash
-cookiecutter https://github.com/llango/cookiecutter-mojo.git
+cookiecutter https://github.com/mojothon/cookiecutter-mojo.git
 ```
 
 ## Notes
