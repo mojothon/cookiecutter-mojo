@@ -4,7 +4,7 @@
 
 ## requirements
 
-- Mojo 1.2.0 (installed by `pixi`)
+- Mojo >=1.2.0 (installed by `pixi`)
 
 ## package build
 
