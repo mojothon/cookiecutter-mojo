@@ -2,6 +2,8 @@
 
 a cookiecutter template for creating a mojo project. Support for publishing to Prefix.dev.
 
+Generated projects are pinned to Mojo 1.2.0 (latest stable release).
+
 
 ## Cookiecutter
 
